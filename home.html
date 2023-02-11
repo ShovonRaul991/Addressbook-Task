@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Address Book</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="page.js" defer></script>
+</head>
+
+<body >
+   <header class="page-header">
+       <h1 class="page-title">Address Book</h1>
+       <nav class="page-navigation">
+           <ul class="page-nav-items">
+               <li><a class="home" id="Home" href="#" onclick="goToHome()">Home</a></li>
+               <li><a class="add-address" id="AddAddress" href="#" onclick="inputContact()">+Add</a></li>      
+            </ul>
+                <img src="blog-icon.png" alt="Blog">
+       </nav>
+   </header>
+   <div class="page-form">
+       <div class="contact-list">
+            <div class="contact-list-header">
+                <h3>Contacts</h3>
+            </div>
+            <div class="contact-list-items" id="ContactListItems">
+               
+                <!--
+                <button class="contact-list-item">
+                    <tr><p class="name">Chandermani Arora</p></tr>
+                    <tr><p class="email">Chandermani@technovert.com</p></tr>
+                    <tr><p class="mobile">+9192929292922</p></tr>
+                </button>
+                
+                <div class="contact-list-item">
+                    <p class="name">Sash Pagadala</p>
+                    <p class="email">Chandermani@technovert.com</p>
+                    <p class="mobile">+91 92929292922</p>
+                </div>
+                <div class="contact-list-item">
+                    <p class="name">Chandermani Arora</p>
+                    <p class="email">Chandermani@technovert.com</p>
+                    <p class="mobile">+91 92929292922</p>
+                </div>
+                <div class="contact-list-item">
+                    <p class="name">Chandermani Arora</p>
+                    <p class="email">Chandermani@technovert.com</p>
+                    <p class="mobile">+91 92929292922</p>
+                </div>
+                --> 
+            </div>
+       </div>
+       <div class="view-details" id="ViewDetails">
+            <div class="view-details-header">
+                    <div class="icon-edit"><img src="edit1.jpg" >Edit</div>
+                    <div class="icon-delete"><img src="delete2.png" onclick="deleteContact()">Delete</div>
+            </div>
+            <div class="view-details-body" id="ViewDetailsBody">
+                <p id="PersonName" class="Person-Name"></p>
+                <div id='DetailEmail' class="detail-email"></div>
+                <div id="DetailMobile" class="detail-mobile"></div>
+                <div id="DetailLandline" class="detail-landline"></div>
+                <div id="DetailSite" class="detail-site"></div>
+
+                <div id="DetailAddress" class="detail-address"><span id="DetailAddressValue" class="detail-address-value"></span></div>
+                
+            </div>
+       </div>
+       <div class="input-form-hidden" id="InputForm">
+            <form class="form-input" id="Formid">
+                <label for="NameEntry">Name <span id="RequiredName">*</span></label>
+                <input id="NameEntry" type="text" onkeydown="nameValidate()" onkeyup="nameValidate()">
+                <label for="EmailEntry">Email <span id="RequiredEmail">*</span></label>
+                <input id="EmailEntry" type="text" onkeydown="validateEmail()" onkeyup="validateEmail()">
+                <div class="mobile-landline">
+                    <div class="mobile-Entry">
+                        <label for="MobileEntry">Mobile <span id="RequiredMobile">*</span></label>
+                        <input id="MobileEntry" type="text" onkeyup="validateMobile()" onkeydown="validateMobile()">
+                    </div>
+                    <div>
+                        <label for="LandlineEntry">Landline<span id="RequiredLandline">*</span></label>
+                        <input id="LandlineEntry" type="text" name="" id="" onkeyup="validateLandline()" onkeydown="validateLandline()">
+                    </div>
+                </div>
+                <label for="WebsiteEntry">Website</label>
+                <input id="WebsiteEntry" type="text">
+                <label for="AddressEntry">Address</label>
+                <textarea name="" id="AddressEntry"></textarea>
+            
+            <div class="submit-button">
+                <input type="button" name="Add" id="SubmitButton" value="Add" onclick="addContact()">
+                <input type="button" name="Edit" id="EditButton" value="Edit">
+            </div>
+        </form>
+       </div>
+       
+   </div>
+   
+</body>
+</html>
