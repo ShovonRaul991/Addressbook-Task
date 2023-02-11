@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <script src="page.js" defer></script>
+    <title>Form</title>
+</head>
+<body>
+    <form class="form-input">
+        <label for="NameEntry">Name</label>
+        <input id="NameEntry" type="text">
+        <label for="EmailEntry">Email</label>
+        <input id="EmailEntry" type="text">
+        <div class="mobile-landline">
+            <div class="mobile-Entry">
+                <label for="MobileEntry">Mobile</label>
+                <input id="MobileEntry" type="text">
+            </div>
+            <div>
+                <label for="LandlineEntry">Landline</label>
+                <input id="LandlineEntry" type="text" name="" id="">
+            </div>
+        </div>
+        <label for="WebsiteEntry">Website</label>
+        <input id="WebsiteEntry" type="text">
+        <label for="AddressEntry">Address</label>
+        <textarea name="" id="AddressEntry"></textarea>
+    </form>
+    <div class="submit-button">
+        <input type="submit" name="Add" id="submitButton" value="Add" onclick="addDetails()">
+        
+    </div>
+</body>
+</html>
